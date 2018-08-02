@@ -7,6 +7,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
+	<style>
+		#add-candidate-button{
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+		}
+	</style>
+
     <body>
 		<div id="body-wrapper">
 
@@ -50,6 +58,76 @@
       			</ul>
 	     </ul>
 
+		  <a class="btn-floating btn-large waves-effect waves-light red modal-trigger"
+			  id="add-candidate-button"
+			  data-target="modal1">
+			  <i class="material-icons">add</i>
+		  </a>
+
+		<div id="modal1" class="modal modal-fixed-footer">
+    		<div class="modal-content">
+				<div class="row">
+					<form class="s12" action="">
+						<div class="input-field col s12">
+          					<input id="first_name" type="text" class="validate">
+          					<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="last_name" type="text" class="validate">
+          					<label for="last_name">Last Name</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="phone" type="text" class="validate">
+          					<label for="phone">Phone No.</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="email" type="text" class="validate">
+          					<label for="email">Email Address</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="skill1" type="text" class="validate">
+          					<label for="skill1">Skill 1</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="skill2" type="text" class="validate">
+          					<label for="skill2">Skill 2</label>
+						</div>
+						<div class="input-field col s12">
+          					<input id="about" type="text" class="validate">
+          					<label for="about">About</label>
+						</div>
+					</form>
+				</div>
+    		</div>
+    		<div class="modal-footer">
+      				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Add</a>
+      				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+    		</div>
+  		</div>
+
+
+
+		 <table class="highlight centered responsive-table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Phone Number</th>
+					<th>Email ID</th>
+					<th>Skill 1</th>
+					<th>Skill 2</th>
+					<th>About</th>
+				</tr>
+			</thead>
+		 	<tr>
+		 		<td>Leah Culver</td>
+		 		<td>Leah Culver</td>
+		 		<td>Leah Culver</td>
+		 		<td>Leah Culver</td>
+		 		<td>Leah Culver</td>
+		 		<td>Leah Culver</td>
+		 	</tr>
+		 </table>
+
 		</div>
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
@@ -60,6 +138,9 @@
 		$('document').ready(function() {
 			$(".sidenav").sidenav()
 			$(".dropdown-trigger").dropdown();
+			$(".modal").modal({
+				//dismissible: false,	
+			});
 		})
 	</script>
 
